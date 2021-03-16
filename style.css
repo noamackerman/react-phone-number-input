@@ -106,7 +106,10 @@
     height: 45px;
     top: 20px;
 	width: 50px;
-	border: 1.42296px solid #74787B;
+	border-top: 1.42296px solid #74787B;
+    border-bottom: 1.42296px solid #74787B;
+    border-left: 1.42296px solid #74787B;
+    border-right: 0;
 	left: 25.5px;
 }
 
