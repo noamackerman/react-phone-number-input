@@ -3,7 +3,7 @@
 	--PhoneInput-color--focus: #03b2cb;
 	--PhoneInputInternationalIconPhone-opacity: 0.8;
 	--PhoneInputInternationalIconGlobe-opacity: 0.65;
-	--PhoneInputCountrySelect-marginRight: 0.35em;
+	--PhoneInputCountrySelect-marginRight: 0;
 	--PhoneInputCountrySelectArrow-width: 0.3em;
 	--PhoneInputCountrySelectArrow-marginLeft: var(--PhoneInputCountrySelect-marginRight);
 	--PhoneInputCountrySelectArrow-borderWidth: 1px;
@@ -23,19 +23,39 @@
 	/* This is done to stretch the contents of this component. */
 	display: flex;
 	align-items: center;
+	justify-content: center;
+    position: relative;
+    top: 20px;
 }
 
 .PhoneInputInput {
-	/* The phone number input stretches to fill all empty space */
-	flex: 1;
 	/* The phone number input should shrink
 	   to make room for the extension input */
-	min-width: 0;
+	background: #FAFAFA;
+    border: 1.42296px solid #74787B;
+    box-sizing: border-box;
+    height: 45px;
+    width: 178px;
+   /* margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;*/
+    outline: none;
+    filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.010691));
+    padding-left: 10px;
+    font-size: 15px;
+    line-height: 23px;
+    text-align: left;
+    letter-spacing: 6px;
+    color: #323232;
 }
 
 .PhoneInputCountryIcon {
 	width: calc(var(--PhoneInputCountryFlag-height) * var(--PhoneInputCountryFlag-aspectRatio));
 	height: var(--PhoneInputCountryFlag-height);
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .PhoneInputCountryIcon--square {
@@ -46,14 +66,14 @@
 	/* Removed `background-color` because when an `<img/>` was still loading
 	   it would show a dark gray rectangle. */
 	/* For some reason the `<img/>` is not stretched to 100% width and height
-	   and sometime there can be seen white pixels of the background at top and bottom. */
-	background-color: var(--PhoneInputCountryFlag-backgroundColor--loading);
+	   and sometime there can be seen white pixels of the background at top and bottom. 
+	background-color: var(--PhoneInputCountryFlag-backgroundColor--loading);*/
 	/* Border is added via `box-shadow` because `border` interferes with `width`/`height`. */
 	/* For some reason the `<img/>` is not stretched to 100% width and height
 	   and sometime there can be seen white pixels of the background at top and bottom,
-	   so an additional "inset" border is added. */
+	   so an additional "inset" border is added. 
 	box-shadow: 0 0 0 var(--PhoneInputCountryFlag-borderWidth) var(--PhoneInputCountryFlag-borderColor),
-		inset 0 0 0 var(--PhoneInputCountryFlag-borderWidth) var(--PhoneInputCountryFlag-borderColor);
+		inset 0 0 0 var(--PhoneInputCountryFlag-borderWidth) var(--PhoneInputCountryFlag-borderColor);*/
 }
 
 .PhoneInputCountryIconImg {
@@ -77,11 +97,17 @@
 /* Styling native country `<select/>`. */
 
 .PhoneInputCountry {
-	position: relative;
 	align-self: stretch;
 	display: flex;
 	align-items: center;
 	margin-right: var(--PhoneInputCountrySelect-marginRight);
+	background: #FAFAFA;
+    border: 2.00508px solid #E1E1E1;
+    height: 45px;
+    top: 20px;
+	width: 50px;
+	border: 1.42296px solid #74787B;
+	left: 25.5px;
 }
 
 .PhoneInputCountrySelect {
@@ -89,7 +115,7 @@
 	top: 0;
 	left: 0;
 	height: 100%;
-	width: 100%;
+	/*width: 100%;*/
 	z-index: 1;
 	border: 0;
 	opacity: 0;
@@ -101,6 +127,8 @@
 }
 
 .PhoneInputCountrySelectArrow {
+	position: relative;
+	right: 3px;
 	display: block;
 	content: '';
 	width: var(--PhoneInputCountrySelectArrow-width);
