@@ -116,13 +116,14 @@
 .PhoneInputCountrySelect {
 	position: absolute;
 	top: 0;
-	left: 0;
+	left: 26px;
 	height: 100%;
 	/*width: 100%;*/
 	z-index: 1;
 	border: 0;
 	opacity: 0;
 	cursor: pointer;
+	max-width: 50px;
 }
 
 .PhoneInputCountrySelect[disabled] {
