@@ -51,6 +51,8 @@
 }
 
 .PhoneInputCountryIcon {
+	position: relative;
+    left: 2px;
 	width: calc(var(--PhoneInputCountryFlag-height) * var(--PhoneInputCountryFlag-aspectRatio));
 	height: var(--PhoneInputCountryFlag-height);
 	display: block;
